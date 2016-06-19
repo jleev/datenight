@@ -1,0 +1,21 @@
+<div class="front_main">
+  <div class="center">
+
+    <h1><center>Date Night</center></h1>
+    <h3><center>Just put in the date and select one or all of the categories to see what is available now!</center></h3>
+
+       <%= form_tag '/results', method: :get do %>
+          <div class="form-group">
+            <%= text_field_tag :search_term, nil, class: "form-control", placeholder: "yyyy-mm-dd" %>
+            <center>
+            <button type="button" class="button">Sports</button>
+            <button type="button" class="button">Theater</button>
+            <button type="button" class="button">Movie</button>
+            <button type="button" class="button">Music</button>
+            <button type="button" class="button">Dinner</button>
+            <%= submit_tag "Search", class: "success button" %>
+            </center>
+           </div>
+        <% end %>
+</div>
+</div>

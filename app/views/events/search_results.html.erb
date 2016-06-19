@@ -1,0 +1,28 @@
+<div class="front_main">
+  <h1>Search Results</h1>
+  <div class="row">
+    <div class="medium-3 columns">
+
+    <% @events.each do |event| %>
+      <h2><%= event.name %></h2>
+      <p><b>Name: </b><%= event.name %></p>
+      <p><b>Category: </b><%= event.category %></p>
+      <p><b>Price: </b><%= event.price %></p>
+      <p><b>Theater Name: </b><%= event.theater_name %></p>
+      <p><b>Address: </b><%= event.address %></p>
+      <p><b>City: </b><%= event.city %></p>
+      <p><b>State: </b><%= event.state %></p>
+      <p><b>Zip: </b><%= event.zip %></p>
+      <p><b>Date Time: </b><%= event.datetime %></p>
+      <p><b>Description: </b><%= event.description %></p>
+          <%= form_tag '/carted_events', method: :post do %>
+              <%= hidden_field_tag :event_id, event.id %><br>
+              <%= submit_tag 'Save', class: "button" %>
+          <% end %>
+      <% end %>
+<br>
+<a class="button" href="/review">Review Your Events</a>
+</div>
+</div>
+</div>
+

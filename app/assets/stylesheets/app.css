@@ -1,0 +1,20 @@
+.front_main {
+
+  padding: 20px
+
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.front_body{
+  background: #8B5F49 url(http://media.ezlinksgolf.com/EZLinks-Images/Capstone/chicagoatnight.jpg) no-repeat top;
+    background-size: cover;
+ }
+
+
+input{
+   text-align:center;
+}
