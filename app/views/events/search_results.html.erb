@@ -1,7 +1,7 @@
 <div class="front_main">
   <h1>Search Results</h1>
-  <div class="row">
-    <div class="medium-3 columns">
+  <div class="column row">
+    <div class="small-4 large-4 columns">
 
     <% @events.each do |event| %>
       <h2><%= event.name %></h2>
@@ -15,6 +15,7 @@
       <p><b>Zip: </b><%= event.zip %></p>
       <p><b>Date Time: </b><%= event.datetime %></p>
       <p><b>Description: </b><%= event.description %></p>
+      <p><b>ID: </b><%= event.id %></p>
           <%= form_tag '/carted_events', method: :post do %>
               <%= hidden_field_tag :event_id, event.id %><br>
               <%= submit_tag 'Save', class: "button" %>

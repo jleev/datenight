@@ -15,10 +15,13 @@
 <div class="grid-block"><b>Date Time: </b><%= event.datetime %></div>
 <div class="grid-block"><b>Description: </b><%= event.description %></div>
 <div class="grid-block"><b>Status: </b><%= event.status %></div>
-<button type="button" class="success button">Confirm</button>
-<button type="button" class="alert button">Remove</button>
+  <%= form_tag '/orders', method: :post do %>
+      <%= hidden_field_tag :event_id, event.id %><br>
+      <%= submit_tag 'Confirm', class: "button" %>
+  <% end %>
 </div>
 <br>
 <% end %>
 </div>
 </div>
+

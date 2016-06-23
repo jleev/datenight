@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   get '/carted_events' => 'carted_events#create'
   post '/carted_events' => 'carted_events#create'
 
-  get '/confirmed' => 'carted_events#confirmed_events'
-  post '/confirmed_events' => 'carted_events#confirm'
+  post '/orders' => 'orders#create'
+  get '/orders/' => 'orders#show'
+
+  post '/carted_events/:id' => 'carted_events#confirm'
   
   delete '/carted_events/:id' => 'carted_events#destroy'
 
