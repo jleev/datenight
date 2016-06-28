@@ -2,6 +2,8 @@ class EventsController < ApplicationController
 
   def index
 
+    # @dinner ||= 5
+
   end  
 
   def show
@@ -36,6 +38,31 @@ class EventsController < ApplicationController
 
   def zurb_index
     
+  end
+
+  def dinner
+    restaurants = Unirest.get("http://opentable.herokuapp.com/api/restaurants?city=chicago").body
+    @restaurants = restaurants["restaurants"].first(10)
+  end
+
+  def seatgeek
+    seatgeek = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz").body
+    @seatgeeks = seatgeek["events"].first(10)
+  end
+
+  def sports
+    sport = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&type=sports").body
+    @sports = sport["events"].first(10)
+  end
+
+  def theater
+    theater = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&type=theater").body
+    @theaters = theater["events"].first(10)
+  end
+
+  def concert
+    concert = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&type=concert").body
+    @concerts = concert["events"].first(10)
   end
 
   def test

@@ -1,24 +1,106 @@
-<div class="front_main">
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zMail</title>
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/routes.js"></script>
+    <script src="assets/js/angular.js"></script>
+  </head>
 
-<div class="row">
+  <style>
+    .scroll-section {overflow-x: scroll;}
+  </style>
 
-<div class="vertical grid-block">
-<% @carted_events.each do |event| %>
-<div class="grid-block"><b>Name: </b><%= event.name %></div>
-<div class="grid-block"><b>Category: </b><%= event.category %></div>
-<div class="grid-block"><b>Price: </b><%= event.price %></div>
-<div class="grid-block"><b>Theater Name: </b><%= event.theater_name %></div>
-<div class="grid-block"><b>Address: </b><%= event.address %></div>
-<div class="grid-block"><b>City: </b><%= event.city %></div>
-<div class="grid-block"><b>State: </b><%= event.state %></div>
-<div class="grid-block"><b>Zip: </b><%= event.zip %></div>
-<div class="grid-block"><b>Date Time: </b><%= event.datetime %></div>
-<div class="grid-block"><b>Description: </b><%= event.description %></div>
-<div class="grid-block"><b>Status: </b><%= event.status %></div>
-<button type="button" class="success button">Confirm</button>
-<button type="button" class="alert button">Remove</button>
-</div>
-<br>
-<% end %>
-</div>
-</div>
+  <body>
+    <div class="grid-frame vertical">
+      
+      <div class="dark shrink title-bar">
+        <div class="center title">Productivity</div>
+        <span class="left"><a zf-open="projects">Projects</a></span>
+        <span class="right"><a zf-open="profile">Profile</a></span>
+      </div>
+
+      <div class="grid-content shrink collapse">
+        <ul class="primary icon-left condense menu-bar">
+          <li><a href="#"><img src="http://placehold.it/50x50"><strong>Foundation for Apps</strong></a></li>
+        </ul>
+      </div>
+      <div class="grid-block scroll-section" ng-class="['ui-animation']" ui-view>
+      </div>
+    </div>
+
+    <zf-panel id="projects" position="left">
+      <a href="#" zf-close>&times;</a>
+      <ul class="menu-bar vertical">
+        <li>
+          <a href="#">
+            <img src="http://placehold.it/50x50">
+            <span class="block-list-label">Amazing Project  &#x2730;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="http://placehold.it/50x50">
+            <span class="block-list-label">Amazing Project  &#x2730;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="http://placehold.it/50x50">
+            <span class="block-list-label">Amazing Project  &#x2730;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="http://placehold.it/50x50">
+            <span class="block-list-label">Amazing Project  &#x2730;</span>
+          </a>
+        </li>
+      </ul>
+    </zf-panel>
+
+    <zf-panel id="profile" position="right">
+      <div class="grid-content small-12">
+        <a href="#" zf-close>&times;</a>
+        <section class="block-list">
+          <header>Activity</header>
+          <ul>
+            <li class="with-chevron">
+              <a href="#">
+                <img src="http://placehold.it/50x50">
+                <span class="block-list-label">Jarvis moved a file</span>
+              </a>
+            </li>
+            <li class="with-chevron">
+              <a href="#">
+                <img src="http://placehold.it/50x50">
+                <span class="block-list-label">Jarvis moved a file</span>
+              </a>
+            </li>
+            <li class="with-chevron">
+              <a href="#">
+                <img src="http://placehold.it/50x50">
+                <span class="block-list-label">Jarvis moved a file</span>
+              </a>
+            </li>
+            <li class="with-chevron">
+              <a href="#">
+                <img src="http://placehold.it/50x50">
+                <span class="block-list-label">Jarvis moved a file</span>
+              </a>
+            </li>
+            <li class="with-chevron">
+              <a href="#">
+                <img src="http://placehold.it/50x50">
+                <span class="block-list-label">Jarvis moved a file</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        </div>
+    </zf-panel>
+  </body>
+</html>

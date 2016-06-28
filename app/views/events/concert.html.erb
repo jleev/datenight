@@ -1,0 +1,13 @@
+<div class="inner_page">
+
+<h1>Concert</h1>
+<% @concerts.each do |concert| %>
+<h3>Title: <%= concert["title"] %></h3>
+<h3>Venue: <%= concert["venue"]["name"] %></h3>
+<h3>Type: <%= concert["type"] %></h3>
+<h3>Date/Time: <%= concert["datetime_local"] %></h3>
+<h3><a href="<%= concert["url"] %>">Book Now</a></h3>
+<br>
+<% end %>
+
+</div>

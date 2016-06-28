@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   get '/results' => 'events#search_results'
   get '/zurb' => 'events#zurb_index'
 
+  get '/dinner' => 'events#dinner'
+
+  get '/seatgeek' => 'events#seatgeek'
+  get '/sports' => 'events#sports'
+  get '/theater' => 'events#theater'
+  get '/concert' => 'events#concert'
+
   get '/test' => 'events#test'
 
   get '/review' => 'carted_events#review'

@@ -4,16 +4,38 @@
 
 }
 
+.inner_page {
+
+  padding: 20px
+
+}
+
 .center {
     margin: auto;
     width: 50%;
 }
 
 .front_body{
-  background: #8B5F49 url(http://media.ezlinksgolf.com/EZLinks-Images/Capstone/chicagoatnight.jpg) no-repeat top;
-    background-size: cover;
+/*  background: #8B5F49 url(http://media.ezlinksgolf.com/EZLinks-Images/Capstone/chicagoatnight.jpg) no-repeat top;
+    background-size: cover;*/
+
+  background: url(http://media.ezlinksgolf.com/EZLinks-Images/Capstone/chicagoatnight.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
  }
 
+.app_title{
+  font-family: Georgia;
+  color: white;
+  font-size:48px;
+}
+.app_description{
+  font-family: Georgia;
+  color: white;
+  font-size:32px;
+}
 
 input{
    text-align:center;
