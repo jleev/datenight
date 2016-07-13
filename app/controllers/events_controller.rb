@@ -1,25 +1,37 @@
 class EventsController < ApplicationController
 
   def index
+    search_term = params[:search_term]
+    events = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&datetime_local.gt=#{search_term}&per_page=100").body
+    @events = events["events"].select { |event| event["stats"]["lowest_price"] != nil }
 
-    # @dinner ||= 5
+    sports = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&taxonomies.name=sports&datetime_local.gt=#{search_term}&per_page=100").body
+    @sports = sports["events"].select { |event| event["stats"]["lowest_price"] != nil }
 
-  end  
+    theater = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&taxonomies.name=theater&datetime_local.gt=#{search_term}&per_page=100").body
+    @theaters = theater["events"].select { |event| event["stats"]["lowest_price"] != nil }
+
+    concert = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&taxonomies.name=concert&datetime_local.gt=#{search_term}&per_page=100").body
+    @concerts = concert["events"].select { |event| event["stats"]["lowest_price"] != nil }
+
+    restaurants = Unirest.get("http://opentable.herokuapp.com/api/restaurants?city=chicago&per_page=100").body
+    @restaurants = restaurants["restaurants"]
+
+  end
 
   def show
     @event = Event.find_by(id: params[:id])
   end
 
   def search_results
-    search_term = params[:search_term]
 
-    @events = Event.where("DATE(datetime) = ?", search_term)
   end
+
 
   def status_update
     if @event = Event.find_by(id: params[:id])
        @event.update(status: "pending")
-     end 
+     end
   end
 
   def review
@@ -35,38 +47,8 @@ class EventsController < ApplicationController
     @event.update(status: "nil")
   end
 
-
-  def zurb_index
-    
-  end
-
-  def dinner
-    restaurants = Unirest.get("http://opentable.herokuapp.com/api/restaurants?city=chicago").body
-    @restaurants = restaurants["restaurants"].first(10)
-  end
-
-  def seatgeek
-    seatgeek = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz").body
-    @seatgeeks = seatgeek["events"].first(10)
-  end
-
-  def sports
-    sport = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&type=sports").body
-    @sports = sport["events"].first(10)
-  end
-
-  def theater
-    theater = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&type=theater").body
-    @theaters = theater["events"].first(10)
-  end
-
-  def concert
-    concert = Unirest.get("https://api.seatgeek.com/2/events?geoip=true&client_id=NDg3MjU1MnwxNDY1NDMxMDMz&type=concert").body
-    @concerts = concert["events"].first(10)
-  end
-
   def test
-    
+
   end
 
 

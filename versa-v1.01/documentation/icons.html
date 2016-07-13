@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Versa-docs</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/docs.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Versa <em>Documentation</em> <span>1.01</span></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Template Docs</a></li>
+                        <li><a href="http://getbootstrap.com/getting-started/" target="_blank">Bootstrap Docs</a></li>
+                        <li><a href="https://wrapbootstrap.com/user/design_mylife" target="_blank">Support Form</a></li>
+                          <li><a href="changelog.html">Changelog</a></li>
+               <li><a href="credits.html">Credits</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+         <div class="intro inner">
+            <div class="container text-left">
+                <h1>Icons</h1>
+            </div>
+        </div>
+
+        <div style="height: 70px"></div>
+
+        <div class="container">
+            <h1>How to use icon fonts</h1>
+            <p>
+                There are 3  icons fonts set included with the pack. Font-Awesome, Et-line, and live icons
+            </p>
+            <ol>
+                <li><a href="https://fortawesome.github.io/Font-Awesome/icons/" target="_blank">Font Awesome</a></li>
+                <li><a href="http://livicons.com/" target="_blank">Live icons</a></li>
+                <li><a href="https://www.elegantthemes.com/blog/resources/how-to-use-and-embed-an-icon-font-on-your-website" target="_blank">ET-Line icons</a></li>
+            </ol>
+            <hr>
+            <h4>Font Awesome</h4>
+            <p>Required file</p>
+            <p>Folder - font-awesome/</p>
+            <pre><code><span class="tag">&lt;<span class="type">link</span><span class="att"> rel=</span><span class="val">"stylesheet"</span><span class="att"> href=</span><span class="val">"bower_components/font-awesome/css/font-awesome.min.css"</span>&gt;<br></span></code></pre>
+            <p>Generate the icon</p>
+             <pre><code><span class="tag">&lt;<span class="type">i</span><span class="att"> class=</span><span class="val">"fa fa-home"</span>&gt;&lt;/i><br></span></code></pre>
+        
+         <hr>
+            <h4>ET-Line icons</h4>
+            <p>Required file</p>
+            <p>Folder - et-line-icons/</p>
+            <pre><code><span class="tag">&lt;<span class="type">link</span><span class="att"> rel=</span><span class="val">"stylesheet"</span><span class="att"> href=</span><span class="val">"et-line-icons/et-line.css"</span>&gt;<br></span></code></pre>
+            <p>Generate the icon</p>
+             <pre><code><span class="tag">&lt;<span class="type">i</span><span class="att"> class=</span><span class="val">"icon-phone"</span>&gt;&lt;/i><br></span></code></pre>
+        
+             
+              <hr>
+            <h4>Live icons</h4>
+            <p>Required file</p>
+            <p>Folder - live-icon/</p>
+            <pre><code><span class="tag">&lt;<span class="type">script</span><span class="att"> src=</span><span class="val">"live-icon/raphael-min.js"</span>&gt;&lt;/script><br>&lt;<span class="type">script</span><span class="att"> src=</span><span class="val">"live-icon/livicons-1.4.min.js"</span>&gt;&lt;/script></span></code></pre>
+            
+            <p>Generate the icon</p>
+             <pre><code><span class="tag">&lt;<span class="type">span</span><span class="att"> class=</span><span class="val">"livicon"</span> data-name<span class="val">"edit"</span>  data-size<span class="val">"32"</span>&gt;&lt;/span><br></span></code></pre>
+        
+        </div>
+
+        <div style="height: 80px"></div>
+        <footer>
+            <div class="container text-center">
+                <span>Copyright &copy; 2016.Versa</span>
+            </div>
+        </footer>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

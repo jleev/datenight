@@ -3,16 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   get '/' => 'events#index'
-  get '/events/:id' => 'events#show'
+  get '/show' => 'events#show'
   get '/results' => 'events#search_results'
-  get '/zurb' => 'events#zurb_index'
 
-  get '/dinner' => 'events#dinner'
-
-  get '/seatgeek' => 'events#seatgeek'
-  get '/sports' => 'events#sports'
-  get '/theater' => 'events#theater'
-  get '/concert' => 'events#concert'
 
   get '/test' => 'events#test'
 
@@ -26,8 +19,16 @@ Rails.application.routes.draw do
   get '/orders/' => 'orders#show'
 
   post '/carted_events/:id' => 'carted_events#confirm'
-  
+
   delete '/carted_events/:id' => 'carted_events#destroy'
+
+  namespace :api do
+    namespace :v1 do
+      get '/carted_events' => 'carted_events#index'
+      post '/carted_events' => 'carted_events#create'
+      get '/carted_events/:id' => 'carted_events#show'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

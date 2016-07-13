@@ -6,7 +6,10 @@ class CartedEventsController < ApplicationController
       user_id: current_user.id,
       status: "pending"
       )
-      redirect_to :back  
+  end
+
+  def show
+    @carted_event = CartedEvent.find(params[:id])
   end
 
   def review
@@ -21,14 +24,14 @@ class CartedEventsController < ApplicationController
       status: "confirmed"
       )
       redirect_to :back
-    end    
+    end
   end
 
   def destroy
     @carted_event = CartedEvent.find(params[:id])
     @carted_event.update(status: "removed")
 
-    redirect_to :back 
+    redirect_to :back
   end
 
 

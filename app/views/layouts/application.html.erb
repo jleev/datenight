@@ -1,53 +1,240 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Date Night</title>
-  <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/zurb/foundation-apps-1.2.0.css">
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/zurb/foundation-apps-1.2.0.min.css">
-  <title>DateNight</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Date Night</title>
 
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Date Night</li>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-            <% if current_user %>
-              <li><%= link_to 'Sign Out', '/users/sign_out', method: :delete %></li>
-            <% else %>
-              <li><%= link_to 'Sign In', '/users/sign_in' %></li>
-              <li><%= link_to 'Sign Up', '/users/sign_up' %></li>
-            <% end %>
-      </ul>
-    </div>
-  </div>
+
+        <title>DateNight</title>
+        <%= stylesheet_link_tag    'application', media: 'all' %>
+        <%= javascript_include_tag 'application' %>
+        <%= csrf_meta_tags %>
+
+
+    </head>
 
 
 
-  <script src="http://cdn.jsdelivr.net/zurb/foundation-apps-1.2.0.js"></script>
-  <script src="http://cdn.jsdelivr.net/zurb/foundation-apps-1.2.0.min.js"></script>
-   
-  <script src="http://cdn.jsdelivr.net/zurb/foundation-apps-templates-1.2.0.js"></script>
-  <script src="http://cdn.jsdelivr.net/zurb/foundation-apps-templates-1.2.0.min.js"></script>
+    <body data-spy="scroll">
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="js/app.js"></script>
+        <div id="preloader"></div>
 
-<div class="container">
+
+        <!-- header -->
+        <!-- <header class="top-header navbar-default  navbar header-transparent navbar-fixed-top yamm"> -->
+            <!-- <div class="search-click">
+                <div class="container-fluid">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Type and hit enter">
+                        <i class="fa fa-times"></i>
+                    </form>
+                </div>
+            </div> -->
+            <!--search bar end-->
+            <!-- <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">logo</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right smooth-scroll">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#folio">Folio</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li><a href="index.html">Back</a></li>
+                    </ul>
+                </div> -->
+                <!--/.nav-collapse -->
+            <!-- </div> -->
+            <!--/.container-fluid -->
+        <!-- </header> -->
+        <!-- header end -->
+
+  <!--back to top-->
+  <a href="#" class="scrollToTop"><span class="livicon " data-size="32" data-name="angle-double-up" data-duration="1000"></span></a>
+  <!--back to top end-->
+
+
+  <script>
+  $(document).ready(function() {
+      $('#resultsdinner').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#resultsall').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#resultssports').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#resultsconcerts').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#resultstheaters').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#results_dinner').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#results_all').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#results_sports').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#results_concerts').DataTable();
+  } );
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#results_theaters').DataTable();
+  } );
+  </script>
+
+
+  <script>
+                      // Formstone Background - Video Background Settings
+                      $(".video-section").background({
+                          source: {
+                              poster: "assets/videos/space_cover.jpg",
+                              mp4: "assets/videos/space.mp4"
+                          }
+                      });
+  </script>
+
+  <script type="text/javascript">
+                      //cube portfolio
+                      // (function ($, window, document, undefined) {
+                      //     'use strict';
+                      //
+                      //     var gridContainer = jQuery('#grid-container'),
+                      //             filtersContainer = jQuery('#filters-container'),
+                      //             wrap, filtersCallback;
+
+
+                          /*********************************
+                           init cubeportfolio
+                           *********************************/
+                          // gridContainer.cubeportfolio({
+                          //     defaultFilter: '*',
+                          //     animationType: 'slideLeft',
+                          //     gapHorizontal: 0,
+                          //     gapVertical: 0,
+                          //     gridAdjustment: 'responsive',
+                          //     mediaQueries: [{
+                          //             width: 800,
+                          //             cols: 3
+                          //         }, {
+                          //             width: 500,
+                          //             cols: 2
+                          //         }, {
+                          //             width: 320,
+                          //             cols: 1
+                          //         }],
+                          //     caption: 'zoom',
+                          //     displayType: 'lazyLoading',
+                          //     displayTypeSpeed: 100
+                          // });
+
+
+                          /*********************************
+                           add listener for filters
+                           *********************************/
+                          // if (filtersContainer.hasClass('cbp-l-filters-dropdown')) {
+                          //     wrap = filtersContainer.find('.cbp-l-filters-dropdownWrap');
+                          //
+                          //     wrap.on({
+                          //         'mouseover.cbp': function () {
+                          //             wrap.addClass('cbp-l-filters-dropdownWrap-open');
+                          //         },
+                          //         'mouseleave.cbp': function () {
+                          //             wrap.removeClass('cbp-l-filters-dropdownWrap-open');
+                          //         }
+                          //     });
+                          //
+                          //     filtersCallback = function (me) {
+                          //         wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
+                          //         wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
+                          //         me.addClass('cbp-filter-item-active');
+                          //         wrap.trigger('mouseleave.cbp');
+                          //     };
+                          // } else {
+                          //     filtersCallback = function (me) {
+                          //         me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
+                          //     };
+                          // }
+                          //
+                          // filtersContainer.on('click.cbp', '.cbp-filter-item', function () {
+                          //     var me = $(this);
+                          //
+                          //     if (me.hasClass('cbp-filter-item-active')) {
+                          //         return;
+                          //     }
+                          //
+                          //     // get cubeportfolio data and check if is still animating (reposition) the items.
+                          //     if (!$.data(gridContainer[0], 'cubeportfolio').isAnimating) {
+                          //         filtersCallback.call(null, me);
+                          //     }
+                          //
+                          //     // filter the items
+                          //     gridContainer.cubeportfolio('filter', me.data('filter'), function () {
+                          //     });
+                          // });
+
+
+                          /*********************************
+                           activate counter for filters
+                           *********************************/
+                      //     gridContainer.cubeportfolio('showCounter', filtersContainer.find('.cbp-filter-item'), function () {
+                      //         // read from url and change filter active
+                      //         var match = /#cbpf=(.*?)([#|?&]|$)/gi.exec(location.href),
+                      //                 item;
+                      //         if (match !== null) {
+                      //             item = filtersContainer.find('.cbp-filter-item').filter('[data-filter="' + match[1] + '"]');
+                      //             if (item.length) {
+                      //                 filtersCallback.call(null, item);
+                      //             }
+                      //         }
+                      //     });
+                      //
+                      // })(jQuery, window, document);
+  </script>
+
+<div>
 <%= yield %>
 </div>
 

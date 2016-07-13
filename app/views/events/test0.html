@@ -1,0 +1,371 @@
+<div class="container">
+
+
+<!-- All Results -->
+<!-- Large modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#all">All</button>
+
+  <div class="modal" id="all">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>All</h2>
+          </div>
+              <div class="modal-body">
+                <div class="table-responsive">
+                  <table id="asdfjlkl" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                      <td><b>Name</b></td>
+                      <td><b>Category</b></td>
+                      <td><b>Price</b></td>
+                      <td><b>Theater Name</b></td>
+                      <td><b>Date Time</b></td>
+                      <td><b>Save</b></td>
+                    </tr>
+
+                <% @events.each do |event| %>
+                <tr>
+                  <td><%= event["title"]%></td>
+                  <td><%= event["type"] %></td>
+                  <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+                  <td><%= event["venue"]["name"] %></td>
+                  <td><%= event["datetime_local"] %></td>
+                  <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+
+                      <!-- <%= form_tag '/carted_events', method: :post do %>
+                          <%= hidden_field_tag :event_id, event["id"] %><br>
+                          <%= submit_tag 'Save', class: "button" %>
+                      <% end %> -->
+                  <br>
+                 </tr>
+                 <% end %>
+               </table>
+               <br>
+              </div>
+              </div>
+      </div>
+     </div>
+    </div>
+
+
+<!-- Sport Results -->
+<!-- Large modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sports">Sports</button>
+
+  <div class="modal" id="sports">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2>Sports</h2>
+          </div>
+              <div class="modal-body">
+                <div class="table-responsive">
+                  <table id="sports" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                  <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Category</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Theater Name</b></td>
+                    <td><b>Date Time</b></td>
+                    <td><b>Save</b></td>
+                  </tr>
+
+                  <% @sports.each do |event| %>
+                  <tr>
+                    <td><%= event["title"]%></td>
+                    <td><%= event["type"] %></td>
+                    <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+                    <td><%= event["venue"]["name"] %></td>
+                    <td><%= event["datetime_local"] %></td>
+                    <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+                        <!-- <%= form_tag '/carted_events', method: :post do %>
+                            <%= hidden_field_tag :event_id, event["id"] %><br>
+                            <%= submit_tag 'Save', class: "button" %>
+                        <% end %> -->
+                    <% end %>
+                    <br>
+                   </tr>
+                 </table>
+                 <br>
+            </div>
+            </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Concerts Results -->
+  <!-- Large modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#concerts">Concerts</button>
+
+    <div class="modal" id="concerts">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Concerts</h2>
+            </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+                    <table id="concerts" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                      <td><b>Name</b></td>
+                      <td><b>Category</b></td>
+                      <td><b>Price</b></td>
+                      <td><b>Theater Name</b></td>
+                      <td><b>Date Time</b></td>
+                      <td><b>Save</b></td>
+                    </tr>
+
+                    <% @concerts.each do |event| %>
+                    <tr>
+                      <td><%= event["title"]%></td>
+                      <td><%= event["type"] %></td>
+                      <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+                      <td><%= event["venue"]["name"] %></td>
+                      <td><%= event["datetime_local"] %></td>
+                      <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+                          <!-- <%= form_tag '/carted_events', method: :post do %>
+                              <%= hidden_field_tag :event_id, event["id"] %><br>
+                              <%= submit_tag 'Save', class: "button" %>
+                          <% end %> -->
+                      <% end %>
+                      <br>
+                     </tr>
+                   </table>
+                   <br>
+              </div>
+              </div>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Theater Results -->
+  <!-- Large modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#theater">Theater</button>
+
+    <div class="modal" id="theater">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Theater</h2>
+            </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+                    <table id="theater" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                      <td><b>Name</b></td>
+                      <td><b>Category</b></td>
+                      <td><b>Price</b></td>
+                      <td><b>Theater Name</b></td>
+                      <td><b>Date Time</b></td>
+                      <td><b>Save</b></td>
+                    </tr>
+
+                    <% @theaters.each do |event| %>
+                    <tr>
+                      <td><%= event["title"]%></td>
+                      <td><%= event["type"] %></td>
+                      <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+                      <td><%= event["venue"]["name"] %></td>
+                      <td><%= event["datetime_local"] %></td>
+                      <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+                          <!-- <%= form_tag '/carted_events', method: :post do %>
+                              <%= hidden_field_tag :event_id, event["id"] %><br>
+                              <%= submit_tag 'Save', class: "button" %>
+                          <% end %> -->
+                      <% end %>
+                      <br>
+                     </tr>
+                   </table>
+                   <br>
+              </div>
+              </div>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Dinner Results -->
+  <!-- Large modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dinner">Dinner</button>
+
+    <div class="modal" id="dinner">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Dinner</h2>
+            </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+
+              </div>
+              </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+  <h1>Search Results</h1>
+  <h2>All</h2>
+  <div class="table-responsive">
+    <table id="example78" class="table table-hover" width="100%" border="1" cellpadding="5">
+    <tr>
+      <td><b>Name</b></td>
+      <td><b>Category</b></td>
+      <td><b>Price</b></td>
+      <td><b>Theater Name</b></td>
+      <td><b>Date Time</b></td>
+      <td><b>Save</b></td>
+    </tr>
+
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event["title"]%></td>
+      <td><%= event["type"] %></td>
+      <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+      <td><%= event["venue"]["name"] %></td>
+      <td><%= event["datetime_local"] %></td>
+      <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+          <!-- <%= form_tag '/carted_events', method: :post do %>
+              <%= hidden_field_tag :event_id, event["id"] %><br>
+              <%= submit_tag 'Save', class: "button" %>
+          <% end %> -->
+      <% end %>
+      <br>
+     </tr>
+   </table>
+   <br>
+
+   <h2>Sports</h2>
+   <div class="table-responsive">
+     <table class="table table-hover" width="100%" border="1" cellpadding="5">
+     <tr>
+       <td><b>Name</b></td>
+       <td><b>Category</b></td>
+       <td><b>Price</b></td>
+       <td><b>Theater Name</b></td>
+       <td><b>Date Time</b></td>
+       <td><b>Save</b></td>
+     </tr>
+
+     <% @sports.each do |event| %>
+     <tr>
+       <td><%= event["title"]%></td>
+       <td><%= event["type"] %></td>
+       <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+       <td><%= event["venue"]["name"] %></td>
+       <td><%= event["datetime_local"] %></td>
+       <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+           <!-- <%= form_tag '/carted_events', method: :post do %>
+               <%= hidden_field_tag :event_id, event["id"] %><br>
+               <%= submit_tag 'Save', class: "button" %>
+           <% end %> -->
+       <% end %>
+       <br>
+      </tr>
+    </table>
+    <br>
+
+    <h2>Concert</h2>
+    <div class="table-responsive">
+      <table class="table table-hover" width="100%" border="1" cellpadding="5">
+      <tr>
+        <td><b>Name</b></td>
+        <td><b>Category</b></td>
+        <td><b>Price</b></td>
+        <td><b>Theater Name</b></td>
+        <td><b>Date Time</b></td>
+        <td><b>Save</b></td>
+      </tr>
+
+      <% @concerts.each do |event| %>
+      <tr>
+        <td><%= event["title"]%></td>
+        <td><%= event["type"] %></td>
+        <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+        <td><%= event["venue"]["name"] %></td>
+        <td><%= event["datetime_local"] %></td>
+        <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+            <!-- <%= form_tag '/carted_events', method: :post do %>
+                <%= hidden_field_tag :event_id, event["id"] %><br>
+                <%= submit_tag 'Save', class: "button" %>
+            <% end %> -->
+        <% end %>
+        <br>
+       </tr>
+     </table>
+     <br>
+
+     <h2>Theater</h2>
+     <div class="table-responsive">
+       <table class="table table-hover" width="100%" border="1" cellpadding="5">
+       <tr>
+         <td><b>Name</b></td>
+         <td><b>Category</b></td>
+         <td><b>Price</b></td>
+         <td><b>Theater Name</b></td>
+         <td><b>Date Time</b></td>
+         <td><b>Save</b></td>
+       </tr>
+
+       <% @theaters.each do |event| %>
+       <tr>
+         <td><%= event["title"]%></td>
+         <td><%= event["type"] %></td>
+         <td><%= number_to_currency(event["stats"]["lowest_price"]) %></td>
+         <td><%= event["venue"]["name"] %></td>
+         <td><%= event["datetime_local"] %></td>
+         <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+             <!-- <%= form_tag '/carted_events', method: :post do %>
+                 <%= hidden_field_tag :event_id, event["id"] %><br>
+                 <%= submit_tag 'Save', class: "button" %>
+             <% end %> -->
+         <% end %>
+         <br>
+        </tr>
+      </table>
+      <br>
+
+   <h2>Dinner</h2>
+
+     <table id="example47" class="table table-striped table-bordered" cellspacing="0" width="100%">
+     <tr>
+       <td><b>Name</b></td>
+       <td><b>Price</b></td>
+       <td><b>City</b></td>
+       <td><b>State</b></td>
+       <td><b>Zip</b></td>
+       <td><b>Save</b></td>
+     </tr>
+
+     <% @restaurants.each do |restaurant| %>
+     <tr>
+       <td><%= restaurant["name"]%></td>
+       <td><%= restaurant["price"] %></td>
+       <td><%= restaurant["city"] %></td>
+       <td><%= restaurant["state"] %></td>
+       <td><%= restaurant["postal_code"] %></td>
+       <td><span class="livicon " data-size="48" data-name="thumbs-up" data-duration="1000"></span></td>
+           <!-- <%= form_tag '/carted_events', method: :post do %>
+               <%= hidden_field_tag :event_id, restaurant["id"] %><br>
+               <%= submit_tag 'Save', class: "button" %>
+           <% end %> -->
+       <% end %>
+       <br>
+      </tr>
+    </table>
+    <br>
+
+<a class="button" href="/review">Review Your Events</a>
+</div>
+</div>
+
+</div>

@@ -9,7 +9,27 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+
+ *= require dataTables.bootstrap.min
+ *= require daterangepicker
+ *= require font-awesome.css
+ *= require et-line.css
+ *= require hover.css
+ *= require animate.css
+ *= require owl.carousel.css
+ *= require owl.theme.css
+ *= require owl.transitions.css
+ *= require lightbox.css
+ *= require flexslider.css
+ *= require background.css
+ *= require masterslider
+ *= require style.css
+ *= require cubeportfolio
+ *= require one_page
+ *= require one_page_video
+ *= require docs
+ *= require bootstrap
+ *= require bootstrap-theme
  *= require_tree .
  *= require_self
  */
