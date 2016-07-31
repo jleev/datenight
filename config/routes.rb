@@ -6,26 +6,21 @@ Rails.application.routes.draw do
   get '/show' => 'events#show'
   get '/results' => 'events#search_results'
 
-
   get '/test' => 'events#test'
 
   get '/review' => 'carted_events#review'
   post '/review_events' => 'events#review_events'
 
   get '/carted_events' => 'carted_events#create'
-  post '/carted_events' => 'carted_events#create'
-
-  post '/orders' => 'orders#create'
-  get '/orders/' => 'orders#show'
-
-  post '/carted_events/:id' => 'carted_events#confirm'
+  post '/carted_events' => 'carted_events#create_email'
 
   delete '/carted_events/:id' => 'carted_events#destroy'
 
   namespace :api do
     namespace :v1 do
       get '/carted_events' => 'carted_events#index'
-      post '/carted_events' => 'carted_events#create'
+      post '/carted_events' => 'carted_events#review'
+      get '/carted_events/review' => 'carted_events#review'
       get '/carted_events/:id' => 'carted_events#show'
     end
   end

@@ -9,13 +9,22 @@
 
     $scope.addCartedEvent = function(cartedEvent){
       $scope.cartedEvents.push(cartedEvent);
-       alert("Saved!");
+      //  alert("Saved!");
        window.console(cartedEvents);
     };
 
+    // $scope.postEvent = function(cartedEvent){
+    //   $http.post('/api/v1/carted_events.json', {info: cartedEvent}).then(function(response){
+    //     $scope.please = response.data;
+    //     console.log($scope.please);
+    //    alert("Saved!");
+    //    window.console(cartedEvents);
+    //  });
+    // };
+
     $scope.addCartedDinner = function(cartedDinner){
       $scope.cartedDinners.push(cartedDinner);
-       alert("Saved!");
+      //  alert("Saved!");
     };
 
     $scope.deleteCartedEvent = function(index){

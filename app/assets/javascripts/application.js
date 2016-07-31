@@ -17,9 +17,9 @@
 //= require jquery-migrate.min
 //= require jquery.easing.min
 //= require jquery.cubeportfolio.min
-//= require jquery-1.12.3
 //= require jquery.dataTables.min
 //= require dataTables.bootstrap.min
+//= require alertify.min
 //= require daterangepicker
 //= require moment.min
 //= require bootstrap.min
@@ -42,7 +42,6 @@
 //= require transition
 //= require background
 //= require bootstrap.min
-//= require npm
 //= require angular
 //= require jquery.vide
 //= require app

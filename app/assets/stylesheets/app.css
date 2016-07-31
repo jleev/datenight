@@ -38,7 +38,17 @@ section {
   transform: translate(-50%, -50%)
 }
 
+.modal-dialog {
+  width: 90%;
+}
 
+.modal-small {
+  width: 50%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
 
 h1{
   font-family: Georgia;
@@ -92,7 +102,7 @@ h2{
 
 	@media (max-width: 767px) {
 	  .fullscreen-bg {
-	    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+	    background: url('http://media.ezlinksgolf.com/EZLinks-Images/Capstone/chicagoatnight.jpg') center center / cover no-repeat;
 	  }
 
 
@@ -114,4 +124,102 @@ input{
                 padding:8px 15px;
                 background:rgba(50, 50, 50, 0.2);
                 border:0px solid #dbdbdb;
+}
+
+.table_review{
+  background-color: #000
+  border: 2px
+}
+
+a {
+    color: #ffffff;
+}
+
+.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+h6 {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+
+h6 span {
+   color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   background-size: 100%;
+   padding: 10px;
+   width: 100%
+}
+
+h6 span.spacer {
+   padding:0 5px;
+}
+
+.select_a_category {
+  padding: 10px;
+}
+
+.my-controller {
+  border: 1px solid #fcc;
+  padding: 5px;
+  margin: 3px;
+}
+.my-controller small {
+  color: #c99;
+}
+.other-controller {
+  border: 1px solid #ccf;
+  padding: 5px;
+  margin: 3px;
+}
+.other-controller small {
+  color: #99c;
+}
+.third-controller {
+  border: 1px solid #cfc;
+  padding: 5px;
+  margin: 3px;
+}
+.third-controller small {
+  color: #9c9;
+}
+
+.semiTrans{
+  opacity:0.8;
+}
+
+img {
+  border: 2px solid #ffffff;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
+.in {
+background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: #ffffff;
+}
+
+/*.modal-header {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+}*/
+
+.skin-bg {
+  background: rgba(0, 0, 0, 0.8);
 }
