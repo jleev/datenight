@@ -17,6 +17,7 @@ gem 'seed_dump'
 
 gem 'devise'
 
+gem 'vuejs-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

@@ -45,4 +45,7 @@
 //= require angular
 //= require jquery.vide
 //= require app
+//= require vue
+//= require vue-router
+//= require vue-resource
 //= require_tree .

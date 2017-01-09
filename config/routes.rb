@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/test' => 'events#test'
 
+  get '/vue' => 'events#vue'
+
   get '/review' => 'carted_events#review'
   post '/review_events' => 'events#review_events'
 

@@ -19,6 +19,9 @@ class EventsController < ApplicationController
 
   end
 
+  def vue
+  end  
+
   def carted_events
 
   end
